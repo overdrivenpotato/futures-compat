@@ -2,13 +2,13 @@
 use std::io;
 use std::sync::Arc;
 
-use futures::{Async as Async01, Future as Future01, Poll as Poll01, Stream as Stream01};
-use futures::task::{self as task01, Task as Task01};
+use futures_v01x::{Async as Async01, Future as Future01, Poll as Poll01, Stream as Stream01};
+use futures_v01x::task::{self as task01, Task as Task01};
 
-use futures_core::{Async as Async02, Future as Future02, Never, Stream as Stream02};
-use futures_core::task::{Context, LocalMap, Wake, Waker};
-use futures_core::executor::{Executor as Executor02, SpawnError};
-use futures_io::{AsyncRead as AsyncRead02, AsyncWrite as AsyncWrite02};
+use futures_v02x::{Async as Async02, Future as Future02, Never, Stream as Stream02};
+use futures_v02x::task::{Context, LocalMap, Wake, Waker};
+use futures_v02x::executor::{Executor as Executor02, SpawnError};
+use futures_v02x::io::{AsyncRead as AsyncRead02, AsyncWrite as AsyncWrite02};
 use tokio_io::{AsyncRead as AsyncReadTk, AsyncWrite as AsyncWriteTk};
 
 /// Wrap a `Future` from v0.2 as a `Future` from v0.1.

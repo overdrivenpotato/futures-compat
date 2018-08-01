@@ -8,10 +8,8 @@
 //!
 //! [futures]: https://crates.io/crates/futures
 
-extern crate futures;
-extern crate futures_core;
-extern crate futures_sink;
-extern crate futures_io;
+extern crate futures_v01x;
+extern crate futures_v02x;
 extern crate tokio_io;
 
 pub mod futures_01;

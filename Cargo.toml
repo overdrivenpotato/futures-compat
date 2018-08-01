@@ -6,8 +6,6 @@ authors = ["Sean McArthur <sean@seanmonstar.com>"]
 license = "MIT"
 
 [dependencies]
-futures = "0.1"
-futures-core = "0.2"
-futures-sink = "0.2"
-futures-io = "0.2"
+futures-v01x = "0.1"
+futures-v02x = "0.1"
 tokio-io = "0.1.6"

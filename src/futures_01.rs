@@ -1,7 +1,7 @@
 //! futures 0.1.x compatibility.
 use std::io;
 
-use futures::{
+use futures_v01x::{
     Async as Async01,
     Future as Future01,
     Poll as Poll01,
@@ -10,14 +10,14 @@ use futures::{
     StartSend as StartSend01,
     AsyncSink as AsyncSink01,
 };
-use futures::executor::{Notify, NotifyHandle, UnsafeNotify, with_notify};
-use futures::future::{Executor as Executor01};
+use futures_v01x::executor::{Notify, NotifyHandle, UnsafeNotify, with_notify};
+use futures_v01x::future::{Executor as Executor01};
 
-use futures_core::{Async as Async02, Future as Future02, Never, Poll as Poll02, Stream as Stream02};
-use futures_core::executor::{Executor as Executor02, SpawnError};
-use futures_core::task::{Context, Waker};
-use futures_io::{AsyncRead as AsyncRead02, AsyncWrite as AsyncWrite02};
-use futures_sink::{Sink as Sink02};
+use futures_v02x::{Async as Async02, Future as Future02, Never, Poll as Poll02, Stream as Stream02};
+use futures_v02x::executor::{Executor as Executor02, SpawnError};
+use futures_v02x::task::{Context, Waker};
+use futures_v02x::io::{AsyncRead as AsyncRead02, AsyncWrite as AsyncWrite02};
+use futures_v02x::{Sink as Sink02};
 
 use tokio_io::{AsyncRead as AsyncReadTk, AsyncWrite as AsyncWriteTk};
 
